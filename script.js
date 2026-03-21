@@ -5,8 +5,11 @@
 // ── Leaderboard Data ──
 const LEADERBOARD_DATA = [
   // Closed Source
+  { model: "Claude Opus 4.6", type: "closed", teams: 52.0, csm: 45.1, email: 57.7, itsm: 33.3, calendar: 43.3, hr: 45.1, drive: 57.1, hybrid: 34.0, avg: 44.6 },
+  { model: "Claude Sonnet 4.6", type: "closed", teams: 47.0, csm: 32.6, email: 58.7, itsm: 35.6, calendar: 40.4, hr: 37.0, drive: 57.1, hybrid: 29.4, avg: 40.4 },
   { model: "Claude Opus 4.5", type: "closed", teams: 50.0, csm: 34.2, email: 51.9, itsm: 23.8, calendar: 43.2, hr: 32.1, drive: 49.5, hybrid: 30.7, avg: 37.0 },
-  { model: "Gemini-3-Flash", type: "closed", teams: 47.3, csm: 35.0, email: 44.3, itsm: 28.5, calendar: 30.5, hr: 12.6, drive: 49.7, hybrid: 24.2, avg: 31.7 },
+  { model: "Gemini 3.1 Pro", type: "closed", teams: 46.0, csm: 46.7, email: 47.1, itsm: 32.8, calendar: 40.4, hr: 9.2, drive: 55.2, hybrid: 30.1, avg: 36.6 },
+   { model: "Gemini-3-Flash", type: "closed", teams: 47.3, csm: 35.0, email: 44.3, itsm: 28.5, calendar: 30.5, hr: 12.6, drive: 49.7, hybrid: 24.2, avg: 31.7 },
   { model: "Claude Sonnet 4.5", type: "closed", teams: 51.0, csm: 16.7, email: 51.3, itsm: 17.6, calendar: 34.6, hr: 21.6, drive: 52.1, hybrid: 28.1, avg: 30.5 },
   { model: "GPT-5.2 (High)", type: "closed", teams: 31.0, csm: 34.8, email: 51.0, itsm: 21.7, calendar: 38.5, hr: 25.0, drive: 40.0, hybrid: 22.2, avg: 31.3 },
   { model: "GPT-5", type: "closed", teams: 26.3, csm: 36.4, email: 49.0, itsm: 18.9, calendar: 41.3, hr: 17.9, drive: 34.0, hybrid: 23.5, avg: 29.2 },
