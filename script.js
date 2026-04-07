@@ -18,12 +18,16 @@ const LEADERBOARD_DATA = [
   { model: "GPT-5-Mini", type: "closed", teams: 25.7, csm: 15.8, email: 47.4, itsm: 8.9, calendar: 28.8, hr: 10.7, drive: 23.8, hybrid: 22.5, avg: 20.6 },
   { model: "Gemini-2.5-Pro", type: "closed", teams: 39.3, csm: 11.6, email: 31.1, itsm: 13.9, calendar: 12.5, hr: 4.9, drive: 27.0, hybrid: 19.6, avg: 17.8 },
   // Open Source
+  { model: "Kimi-K2.5-Thinking", type: "open", teams: 44.0, csm: 14.1, email: 46.2, itsm: 12.2, calendar: 31.7, hr: 19.6, drive: 43.8, hybrid: 24.2, avg: 26.2 },
   { model: "DeepSeek-V3.2 (High)", type: "open", teams: 37.0, csm: 14.1, email: 47.1, itsm: 16.1, calendar: 21.2, hr: 16.3, drive: 35.2, hybrid: 22.9, avg: 23.8 },
+  { model: "Minimax-m2.7", type: "open", teams: 42.0, csm: 13.6, email: 49.0, itsm: 14.4, calendar: 19.2, hr: 11.4, drive: 30.5, hybrid: 25.5, avg: 23.0 },
   { model: "GPT-OSS-120B (High)", type: "open", teams: 32.0, csm: 16.3, email: 42.3, itsm: 6.1, calendar: 35.6, hr: 16.3, drive: 41.0, hybrid: 19.6, avg: 23.0 },
+  { model: "GLM-5", type: "open", teams: 21.0, csm: 18.5, email: 29.8, itsm: 18.3, calendar: 24.0, hr: 22.4, drive: 34.3, hybrid: 17.2, avg: 22.2 },
   { model: "DeepSeek-V3.2 (Medium)", type: "open", teams: 35.7, csm: 15.4, email: 45.8, itsm: 9.6, calendar: 21.5, hr: 15.0, drive: 27.6, hybrid: 22.9, avg: 21.8 },
   { model: "Kimi-K2-Thinking", type: "open", teams: 30.0, csm: 7.1, email: 51.0, itsm: 12.2, calendar: 15.4, hr: 8.2, drive: 39.6, hybrid: 15.7, avg: 19.2 },
   { model: "Qwen3-30B (Think)", type: "open", teams: 22.0, csm: 5.4, email: 51.9, itsm: 6.7, calendar: 18.3, hr: 7.6, drive: 25.7, hybrid: 15.7, avg: 16.3 },
   { model: "Qwen3-235B (Inst.)", type: "open", teams: 28.0, csm: 4.7, email: 38.1, itsm: 9.3, calendar: 15.7, hr: 7.8, drive: 23.8, hybrid: 17.7, avg: 15.8 },
+  { model: "Gemma-26b-a4b", type: "open", teams: 23.0, csm: 6.0, email: 43.3, itsm: 9.4, calendar: 10.6, hr: 4.3, drive: 27.6, hybrid: 15.7, avg: 15.1 },
   { model: "Qwen3-4B (Think)", type: "open", teams: 24.0, csm: 3.8, email: 38.4, itsm: 5.6, calendar: 5.8, hr: 7.1, drive: 21.9, hybrid: 15.8, avg: 13.2 },
 ];
 
