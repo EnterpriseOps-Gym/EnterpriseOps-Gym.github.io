@@ -7,6 +7,7 @@ const LEADERBOARD_DATA = [
   // Closed Source
   { model: "Gemini 3.5 Flash (High)", type: "closed", teams: 48.0, csm: 47.9, email: 55.8, itsm: 42.5, calendar: 42.3, hr: 40.8, drive: 55.2, hybrid: 35.3, avg: 46.0 },
   { model: "GPT-5.5 (High)", type: "closed", teams: 41.0, csm: 46.2, email: 48.1, itsm: 34.3, calendar: 45.2, hr: 38.6, drive: 50.5, hybrid: 25.5, avg: 41.2 },
+  { model: "Claude Opus 4.7 (High)", type: "closed", teams: 54.0, csm: 33.3, email: 55.8, itsm: 30.4, calendar: 41.4, hr: 23.9, drive: 59.1, hybrid: 31.4, avg: 41.2 },
   { model: "Claude Opus 4.6", type: "closed", teams: 52.0, csm: 45.1, email: 57.7, itsm: 33.3, calendar: 43.3, hr: 45.1, drive: 57.1, hybrid: 34.0, avg: 44.6 },
   { model: "Claude Sonnet 4.6", type: "closed", teams: 47.0, csm: 32.6, email: 58.7, itsm: 35.6, calendar: 40.4, hr: 37.0, drive: 57.1, hybrid: 29.4, avg: 40.4 },
   { model: "Claude Opus 4.5", type: "closed", teams: 50.0, csm: 34.2, email: 51.9, itsm: 23.8, calendar: 43.2, hr: 32.1, drive: 49.5, hybrid: 30.7, avg: 37.0 },
