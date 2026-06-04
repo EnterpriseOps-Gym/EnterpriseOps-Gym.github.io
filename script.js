@@ -23,7 +23,9 @@ const LEADERBOARD_DATA = [
   { model: "Gemini-2.5-Pro", type: "closed", teams: 39.3, csm: 11.6, email: 31.1, itsm: 13.9, calendar: 12.5, hr: 4.9, drive: 27.0, hybrid: 19.6, avg: 17.8 },
   // Open Source
    
-
+  { model: "Nvidia Nemotron 3 Ultra (Think)", type: "open", teams: null, csm: null, email: null, itsm: null, calendar: null, hr: null, drive: null, hybrid: null, avg: 33.0 },
+  { model: "Kimi K2.6 1T", type: "open", teams: null, csm: null, email: null, itsm: null, calendar: null, hr: null, drive: null, hybrid: null, avg: 29.0 },
+  { model: "Qwen 3.5 (397B)", type: "open", teams: null, csm: null, email: null, itsm: null, calendar: null, hr: null, drive: null, hybrid: null, avg: 30.0 },
   { model: "Nvidia Nemotron 3 Super (Think)", type: "open", teams: 44.3, csm: 16.8, email: 57.0, itsm: 16.7, calendar: 31.7, hr: 16.3, drive: 30.1, hybrid: 29.8, avg: 27.3 },
   { model: "Kimi-K2.5-Thinking", type: "open", teams: 44.0, csm: 14.1, email: 46.2, itsm: 12.2, calendar: 31.7, hr: 19.6, drive: 43.8, hybrid: 24.2, avg: 26.2 },
   { model: "DeepSeek-V3.2 (High)", type: "open", teams: 37.0, csm: 14.1, email: 47.1, itsm: 16.1, calendar: 21.2, hr: 16.3, drive: 35.2, hybrid: 22.9, avg: 23.8 },
@@ -71,6 +73,10 @@ function renderLeaderboard() {
   data.sort((a, b) => {
     const va = typeof a[sortCol] === "string" ? a[sortCol].toLowerCase() : a[sortCol];
     const vb = typeof b[sortCol] === "string" ? b[sortCol].toLowerCase() : b[sortCol];
+    // Missing values always sort to the bottom regardless of direction
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
     if (va < vb) return sortDir === "asc" ? -1 : 1;
     if (va > vb) return sortDir === "asc" ? 1 : -1;
     return 0;
@@ -79,7 +85,7 @@ function renderLeaderboard() {
   // Find column bests (for highlighting)
   const bests = {};
   DOMAIN_COLS.forEach(col => {
-    bests[col] = Math.max(...data.map(d => d[col]));
+    bests[col] = Math.max(...data.map(d => d[col]).filter(v => v != null));
   });
 
   // Build rows
@@ -99,7 +105,7 @@ function renderLeaderboard() {
       const isBest = row[col] === bests[col] ? "cell-best" : "";
       const isAvg = col === "avg" ? "col-avg" : "";
       const classes = [isBest, isAvg].filter(Boolean).join(" ");
-      const val = row[col].toFixed(1);
+      const val = row[col] == null ? "—" : row[col].toFixed(1);
       cells += `<td class="${classes}">${val}</td>`;
     });
 
