@@ -176,22 +176,22 @@
       <div class="stats-strip reveal">
         <div class="stat-card">
           <div class="stat-icon">🛠️</div>
-          <div class="stat-value" data-target="512">0</div>
+          <div class="stat-value" data-target="512">512</div>
           <div class="stat-label">Tools</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">📋</div>
-          <div class="stat-value" data-target="1150">0</div>
+          <div class="stat-value" data-target="1150">1,150</div>
           <div class="stat-label">Tasks</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">🗄️</div>
-          <div class="stat-value" data-target="164">0</div>
+          <div class="stat-value" data-target="164">164</div>
           <div class="stat-label">DB Tables</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">🏢</div>
-          <div class="stat-value" data-target="8">0</div>
+          <div class="stat-value" data-target="8">8</div>
           <div class="stat-label">Domains</div>
         </div>
       </div>
@@ -362,6 +362,20 @@
       </p>
     </div>
   </footer>
+
+
+  <script>
+    // Fallback: show stat values even if the counter animation script does not run.
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".stat-value[data-target]").forEach(function (el) {
+        var target = el.getAttribute("data-target");
+        if (!el.textContent.trim() || el.textContent.trim() === "0") {
+          el.textContent = target === "1150" ? "1,150" : target;
+        }
+      });
+    });
+  </script>
+
 
   <!-- Scripts -->
   <script src="script.js"></script>
