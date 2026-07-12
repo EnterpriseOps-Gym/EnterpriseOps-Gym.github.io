@@ -21,6 +21,55 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Local layout fixes: keeps original sections visible and avoids oversized blank hero -->
+  <style>
+    .hero {
+      min-height: auto !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .hero .container {
+      padding-bottom: 0 !important;
+    }
+
+    .hero-actions {
+      margin-bottom: 2rem !important;
+    }
+
+    .stats-strip {
+      margin-top: 2rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    section {
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+
+    #abstract {
+      margin-top: 0 !important;
+      padding-top: 5rem !important;
+    }
+
+    .reveal {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-bottom: 3rem !important;
+      }
+
+      section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -215,21 +264,21 @@
             regulated industries.</p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-icon orange">�</div>
+          <div class="feature-icon orange">🔀</div>
           <h3>Cross-Domain Orchestration</h3>
           <p>Unique <strong>Hybrid</strong> scenarios require agents to coordinate across 8 interconnected ecosystems —
             e.g., resolving a CSM ticket by checking HR records and updating a Teams channel — reflecting real
             enterprise fragmentation.</p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-icon pink">�</div>
+          <div class="feature-icon pink">🚫</div>
           <h3>Infeasibility &amp; Refusal Testing</h3>
           <p>A dedicated subset of <strong>infeasible tasks</strong> evaluates an agent's safety reasoning — agents must
             identify and refuse requests that violate organizational policies or system constraints, preventing harmful
             actions or data leaks.</p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-icon indigo">�</div>
+          <div class="feature-icon indigo">🧠</div>
           <h3>Long-Horizon Stateful Trajectories</h3>
           <p>Tasks require up to <strong>34 sequential steps</strong> in a stateful ReAct loop where every action
             permanently affects the shared database, demanding committed, multi-step planning rather than greedy tool
